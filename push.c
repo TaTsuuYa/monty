@@ -2,7 +2,7 @@
 
 void push(stack_t **stack, unsigned int line_number)
 {
-	stack_t *current, *new;
+	stack_t *new;
 
 	new = malloc(sizeof(stack_t));
 	if (new == NULL)
@@ -18,18 +18,10 @@ void push(stack_t **stack, unsigned int line_number)
 	}
 	new->n = atoi(DATA);
 	new->prev = NULL;
-	new->next = NULL;
+	new->next = (*stack);
 
-	if (*stack == NULL)
-	{
-		(*stack) = new;
-		return;
-	}
+	if (*stack != NULL)
+		(*stack)->prev = new;
 
-	current = *stack;
-	while (current->next)
-		current = current->next;
-
-	new->prev = current;
-	current->next = new;
+	*stack = new;
 }
