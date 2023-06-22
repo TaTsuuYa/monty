@@ -2,6 +2,13 @@
 
 char *DATA;
 
+/**
+ * main - main program
+ * @argc: arguments count
+ * @argv: arguments list
+ *
+ * Return: EXIT_SUCCESS
+ */
 int main(int argc, char **argv)
 {
 	FILE *fp;
@@ -26,7 +33,6 @@ int main(int argc, char **argv)
 	stack = NULL;
 	while (fgets(line, max, fp))
 	{
-		line[strlen(line) - 2] = '\0';
 		command = strtok(line, SEP);
 		DATA = strtok(NULL, SEP);
 		exec(command, &stack, L);

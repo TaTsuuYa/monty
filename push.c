@@ -1,5 +1,11 @@
 #include "monty.h"
 
+/**
+ * push - pushes a new element to the stack
+ * @stack: the stack head
+ * @line_number: line number
+ */
+
 void push(stack_t **stack, unsigned int line_number)
 {
 	stack_t *new;

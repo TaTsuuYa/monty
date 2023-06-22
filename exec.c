@@ -1,14 +1,20 @@
 #include "monty.h"
 
+/**
+ * exec - executes monty commands
+ * @cmd: command
+ * @stack: the stack head
+ * @L: line number
+ */
+
 void exec(char *cmd, stack_t **stack, unsigned int L)
 {
 	int i;
-	instruction_t inst[] =
-		{
-			{"push", push},
-			{"pall", pall},
-			{NULL, NULL},
-		};
+	instruction_t inst[] = {
+		{"push", push},
+		{"pall", pall},
+		{NULL, NULL},
+	};
 
 	for (i = 0; inst[i].opcode != NULL; i++)
 	{
