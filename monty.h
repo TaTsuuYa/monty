@@ -39,7 +39,10 @@ typedef struct instruction_s
 extern char *DATA;
 
 void exec(char *cmd, stack_t **stack, unsigned int L);
+
+/* opcode */
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
+void pint(stack_t **stack, unsigned int line_number);
 
 #endif /* #ifndef MONTY_H */

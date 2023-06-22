@@ -13,6 +13,7 @@ void exec(char *cmd, stack_t **stack, unsigned int L)
 	instruction_t inst[] = {
 		{"push", push},
 		{"pall", pall},
+		{"pint", pint},
 		{NULL, NULL},
 	};
 
