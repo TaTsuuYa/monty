@@ -1,7 +1,4 @@
-push 1
+push 10
 push 5
-push 20
-pall
-nop
 add
 pall

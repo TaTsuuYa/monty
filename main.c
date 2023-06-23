@@ -35,11 +35,13 @@ int main(int argc, char **argv)
 	{
 		command = strtok(line, SEP);
 		DATA = strtok(NULL, SEP);
-		exec(command, &stack, L);
+		if (command != NULL)
+			exec(command, &stack, L);
 		L++;
 	}
 
 	/* TODO: free the whole stack*/
+	free_stack(stack);
 	fclose(fp);
 	return (EXIT_SUCCESS);
 }

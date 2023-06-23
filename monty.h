@@ -39,6 +39,7 @@ typedef struct instruction_s
 extern char *DATA;
 
 void exec(char *cmd, stack_t **stack, unsigned int L);
+void free_stack(stack_t *head);
 
 /* opcode */
 void push(stack_t **stack, unsigned int line_number);
