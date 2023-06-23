@@ -1,2 +1,4 @@
+push 1
+push 5
+swap
 pall
-pop
