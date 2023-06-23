@@ -17,6 +17,7 @@ void exec(char *cmd, stack_t **stack, unsigned int L)
 		{"pop", pop},
 		{"swap", swap},
 		{"add", add},
+		{"nop", nop},
 		{NULL, NULL},
 	};
 
