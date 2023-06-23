@@ -40,7 +40,6 @@ int main(int argc, char **argv)
 		L++;
 	}
 
-	/* TODO: free the whole stack*/
 	free_stack(stack);
 	fclose(fp);
 	return (EXIT_SUCCESS);
