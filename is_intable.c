@@ -16,8 +16,9 @@ int is_intable(char *s)
 		return (0);
 
 	for (i = 0; s[i] != 0; i++)
-		if (s[i] < '0' || s[i] > '9')
-			return (0);
+		if (s[i] != '-')
+			if (s[i] < '0' || s[i] > '9')
+				return (0);
 
 	return (1);
 }
