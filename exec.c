@@ -30,6 +30,6 @@ void exec(char *cmd, stack_t **stack, unsigned int L)
 		}
 	}
 
-	fprintf(stderr, "L%d: unknown instruction %s\n", L, inst[i].opcode);
+	fprintf(stderr, "L%d: unknown instruction %s\n", L, cmd);
 	exit(EXIT_FAILURE);
 }
